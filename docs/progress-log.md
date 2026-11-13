@@ -13,3 +13,6 @@
 - User reported completion of ESP32 board-package installation and board/port selection instructions. Exact software versions and port are not recorded yet.
 - Added lesson 2 and a USB serial test sketch. Hardware upload and output verification remain pending.
 - Previous GitHub push was denied for the locally authenticated account AnuragShirodkar; remote publication remains unconfirmed.
+- User verified the USB test: readable uptime values 63, 65, 67, 69, and 71 seconds. Lesson 2 passed based on reported serial output.
+- Selected a Wi-Fi router for the next test.
+- Added lesson 3, a Wi-Fi connection sketch, and a public credential template. Actual Wi-Fi connection remains pending.
