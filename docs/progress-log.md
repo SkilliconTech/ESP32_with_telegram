@@ -19,3 +19,6 @@
 - User confirmed router Wi-Fi connection and installation of UniversalTelegramBot and ArduinoJson (versions pending).
 - Added lesson 4: direct Telegram HTTPS polling, local chat ID discovery, and private-chat authorization. Telegram exchange awaits hardware verification.
 - Preserved the edited Wi-Fi public template in a Git-ignored local backup and restored public placeholders to avoid publishing possible credentials.
+- User confirmed receipt of the first Telegram reply; two-way Telegram communication passed. Separate /status confirmation has not yet been reported.
+- User has an external LED and 330-ohm resistor and reports completing the GPIO23 wiring.
+- Added lesson 5 and a separate LED-control sketch; physical on/off testing remains pending.
