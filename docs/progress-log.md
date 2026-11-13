@@ -22,3 +22,6 @@
 - User confirmed receipt of the first Telegram reply; two-way Telegram communication passed. Separate /status confirmation has not yet been reported.
 - User has an external LED and 330-ohm resistor and reports completing the GPIO23 wiring.
 - Added lesson 5 and a separate LED-control sketch; physical on/off testing remains pending.
+- User confirmed physical LED on/off control through Telegram. Lesson 5 passed based on the user's report.
+- All five original project commits were pushed individually to GitHub after collaborator access was fixed.
+- Added lesson 6: a Render hosting checkpoint with / and /health endpoints. Public deployment, server-mediated Telegram commands and OTA remain pending.
