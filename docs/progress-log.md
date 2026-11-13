@@ -7,3 +7,9 @@
 - GitHub: https://github.com/SkilliconTech/ESP32_with_telegram
 - Pending user verification: bot creation and command menu.
 - No firmware uploaded, Telegram replies tested, Render service deployed, or OTA performed yet.
+
+## 13 November 2026
+- User confirmed bot username matches the suggested SkilliconESP32Lab_bot and Arduino IDE is installed.
+- User reported completion of ESP32 board-package installation and board/port selection instructions. Exact software versions and port are not recorded yet.
+- Added lesson 2 and a USB serial test sketch. Hardware upload and output verification remain pending.
+- Previous GitHub push was denied for the locally authenticated account AnuragShirodkar; remote publication remains unconfirmed.

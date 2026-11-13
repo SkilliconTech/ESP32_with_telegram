@@ -4,7 +4,7 @@ A step-by-step college workshop by SkilliconTech.
 
 ## Learning path
 1. [Create and configure the Telegram bot](docs/01-telegram-setup.md).
-2. Prepare the ESP32-WROOM-32 and verify a USB upload (next lesson).
+2. [Prepare the ESP32-WROOM-32 and verify a USB upload](docs/02-usb-test.md).
 3. Implement and test Telegram commands (next lesson).
 4. Connect Telegram and the ESP32 through a Render server (planned).
 5. Add authenticated firmware updates over Wi-Fi (planned).
@@ -14,7 +14,7 @@ Final intended flow: Telegram user -> Telegram Bot API -> Render server <- ESP32
 Remote control sends instructions to an existing program. OTA replaces the program running on the board. They are separate milestones.
 
 ## Current status
-Documentation initialized. Bot creation, device tests, server deployment, and OTA are not yet verified. Follow lesson 1 first.
+User reported Telegram bot creation and Arduino IDE board setup complete. Lesson 2 is ready for the first USB upload. Device execution, server deployment, and OTA remain unverified.
 
 ## Equipment for later lessons
 - ESP32-WROOM-32 development board, USB data cable, computer.
@@ -37,3 +37,4 @@ Render free services can sleep after 15 minutes without inbound traffic and may 
 - https://core.telegram.org/bots/api
 - https://render.com/docs/free
 - https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/system/ota.html
+
