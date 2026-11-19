@@ -25,3 +25,11 @@
 - User confirmed physical LED on/off control through Telegram. Lesson 5 passed based on the user's report.
 - All five original project commits were pushed individually to GitHub after collaborator access was fixed.
 - Added lesson 6: a Render hosting checkpoint with / and /health endpoints. Public deployment, server-mediated Telegram commands and OTA remain pending.
+
+## 19 November 2026
+- User verified the deployed Render /health response at https://esp32-with-telegram.onrender.com/health.
+- Scope clarified: serial and web LED control with status sent to Render; Telegram is not part of this stage.
+- Added authenticated dashboard and single-device synchronization API, with command expiry, acknowledgment and offline detection.
+- Added separate ESP32 sketch with nonblocking blink/serial loop and a network task; hardware upload and end-to-end verification remain pending.
+- Documented Render keys, single-worker requirement, temporary server state, setup and demonstration checklist in lesson 7.
+- Validation: five server API tests passed; dashboard JavaScript syntax checked; ESP32 Dev Module firmware compiled successfully (1,065,668 bytes flash; 48,920 bytes globals). Browser visual QA and physical end-to-end testing remain pending.
