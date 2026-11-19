@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: esp32-with-telegram
+    runtime: python
+    plan: free
+    rootDir: server
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --workers 1 --threads 4 --bind 0.0.0.0:$PORT app:app
+    healthCheckPath: /health
+    envVars:
+      - key: DEVICE_KEY
+        generateValue: true
+      - key: DASHBOARD_KEY
+        generateValue: true
