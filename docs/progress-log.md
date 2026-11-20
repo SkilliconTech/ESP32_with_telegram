@@ -33,3 +33,9 @@
 - Added separate ESP32 sketch with nonblocking blink/serial loop and a network task; hardware upload and end-to-end verification remain pending.
 - Documented Render keys, single-worker requirement, temporary server state, setup and demonstration checklist in lesson 7.
 - Validation: five server API tests passed; dashboard JavaScript syntax checked; ESP32 Dev Module firmware compiled successfully (1,065,668 bytes flash; 48,920 bytes globals). Browser visual QA and physical end-to-end testing remain pending.
+
+## 20 November 2026: Web-command expiry fix
+- User uploaded the dashboard sketch. Screenshot confirmed online telemetry, BLINK mode and SERIAL source, but web commands were reported as superseded.
+- Found protocol mismatch: server emitted fractional expiry seconds while firmware reads an integer with ArduinoJson's default-value operator. Changed the server to emit integer epoch seconds.
+- Added a regression test checking integer expiry in both command creation and device delivery. All six server tests pass.
+- Fix is server-only; no firmware re-upload needed. Await Render deployment of 54d80b2 or later and a fresh physical web-command test.
