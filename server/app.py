@@ -53,7 +53,7 @@ def command():
         expire()
         if time.time()-state['seen'] >= 20:
             return jsonify(error='Device offline; command not queued'), 409
-        state['pending'] = {'id': secrets.token_hex(12), 'mode': data['mode'], 'expires': time.time()+30}
+        state['pending'] = {'id': secrets.token_hex(12), 'mode': data['mode'], 'expires': int(time.time())+30}
         state['result'] = 'Waiting for device confirmation'
         return jsonify(state['pending']), 202
 

@@ -1,6 +1,7 @@
 import os
 import time
 import unittest
+from unittest.mock import patch
 from app import app, state
 
 class DashboardTests(unittest.TestCase):
@@ -26,6 +27,16 @@ class DashboardTests(unittest.TestCase):
         self.assertEqual(self.sync().json['command']['id'],command['id'])
         self.assertIsNone(self.sync(mode='ON',led=True,source='WEB',ack=command['id'],outcome='applied').json['command'])
         self.assertEqual(self.c.get('/api/status',headers=self.web).json['report']['mode'],'ON')
+    def test_expiry_is_integer_for_esp32_parser(self):
+        # ArduinoJson's `value | 0L` rejects a JSON floating-point number.
+        with patch('app.time.time', return_value=1795000000.75):
+            self.sync()
+            command=self.c.post('/api/command',json={'mode':'ON'},headers=self.web).json
+            self.assertIs(type(command['expires']), int)
+            self.assertEqual(command['expires'],1795000030)
+            delivered=self.sync().json['command']
+            self.assertIs(type(delivered['expires']), int)
+            self.assertGreater(delivered['expires'],1795000000)
     def test_expiration_and_invalid_report(self):
         self.sync()
         self.c.post('/api/command',json={'mode':'BLINK'},headers=self.web)
