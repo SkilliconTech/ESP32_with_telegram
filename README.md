@@ -2,6 +2,8 @@
 
 A step-by-step college workshop by SkilliconTech.
 
+Start with the [complete beginner-to-advanced workshop report](docs/08-complete-workshop-report.md), including the Google sign-in route for students without GitHub accounts.
+
 ## Learning path
 1. [Create and configure the Telegram bot](docs/01-telegram-setup.md).
 2. [Prepare the ESP32-WROOM-32 and verify a USB upload](docs/02-usb-test.md).

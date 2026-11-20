@@ -39,3 +39,5 @@
 - Found protocol mismatch: server emitted fractional expiry seconds while firmware reads an integer with ArduinoJson's default-value operator. Changed the server to emit integer epoch seconds.
 - Added a regression test checking integer expiry in both command creation and device delivery. All six server tests pass.
 - Fix is server-only; no firmware re-upload needed. Await Render deployment of 54d80b2 or later and a fresh physical web-command test.
+- User reconfirmed working web control and requested a complete classroom report.
+- Added the complete workshop report, including Google/email login plus public Git repository deployment without personal student GitHub accounts, manual-update limitations and independent team services.
